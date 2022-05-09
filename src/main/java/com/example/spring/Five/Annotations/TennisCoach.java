@@ -6,6 +6,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class TennisCoach implements Coach {
 
+    // Field injection (not recommended https://habr.com/ru/post/334636/)
+    @Autowired
     private FortuneService fortuneService;
 
     // define a default constructor
@@ -27,11 +29,11 @@ public class TennisCoach implements Coach {
 //    }
 
     // Method injection
-    @Autowired
-    public void doSomeCrazyStuff (FortuneService fortuneService) {
-        System.out.println(">> TennisCoach: inside method doSomeCrazyStuff");
-        this.fortuneService = fortuneService;
-    }
+//    @Autowired
+//    public void doSomeCrazyStuff (FortuneService fortuneService) {
+//        System.out.println(">> TennisCoach: inside method doSomeCrazyStuff");
+//        this.fortuneService = fortuneService;
+//    }
 
     @Override
     public String getDailyWorkout() {
