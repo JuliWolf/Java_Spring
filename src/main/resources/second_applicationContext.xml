@@ -27,6 +27,10 @@
           class="com.example.spring.Second.Dependency_injections.CricketCoach">
         <!-- set up setter injection -->
         <property name="fortuneService" ref="myFortuneService" />
+
+        <!-- inject literal values -->
+        <property name="emailAddress" value="test@test.ru" />
+        <property name="team" value="Sunrisers Hyberabad" />
     </bean>
 </beans>
 
