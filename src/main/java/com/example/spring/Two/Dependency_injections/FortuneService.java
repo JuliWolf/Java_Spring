@@ -1,4 +1,4 @@
-package com.example.spring.Second.Dependency_injections;
+package com.example.spring.Two.Dependency_injections;
 
 public interface FortuneService {
     public String getFortune();

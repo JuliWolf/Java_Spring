@@ -13,21 +13,21 @@
     <!-- define the dependency -->
     <bean
         id="myFortuneService"
-        class="com.example.spring.Second.Dependency_injections.HappyFortuneService"
+        class="com.example.spring.Two.Dependency_injections.HappyFortuneService"
     >
     </bean>
 
     <!-- Define your beans here -->
     <bean
         id="myCoach"
-        class="com.example.spring.Second.Dependency_injections.TrackCoach"
+        class="com.example.spring.Two.Dependency_injections.TrackCoach"
     >
         <!-- set up constructor injection -->
         <constructor-arg ref="myFortuneService" />
     </bean>
 
     <bean id="myCricketCoach"
-          class="com.example.spring.Second.Dependency_injections.CricketCoach">
+          class="com.example.spring.Two.Dependency_injections.CricketCoach">
         <!-- set up setter injection -->
         <property name="fortuneService" ref="myFortuneService" />
 

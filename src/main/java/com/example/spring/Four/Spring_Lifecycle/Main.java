@@ -1,19 +1,17 @@
-package com.example.spring.First.Inversion_of_Control;
+package com.example.spring.Four.Spring_Lifecycle;
 
+import com.example.spring.Two.Dependency_injections.Coach;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class HelloSpringApp {
+public class Main {
     public static void main(String[] args) {
         // load the spring configuration file
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("applicationContext.xml");
-
+                new ClassPathXmlApplicationContext("four_beanLifecycle.xml");
 
         // retrieve bean from spring container
         Coach theCoach = context.getBean("myCoach", Coach.class);
 
-        // call methods on the bean
-        System.out.println(theCoach.getDailyWorkout());
 
         // close the context
         context.close();

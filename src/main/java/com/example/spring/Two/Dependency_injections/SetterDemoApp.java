@@ -1,4 +1,4 @@
-package com.example.spring.Second.Dependency_injections;
+package com.example.spring.Two.Dependency_injections;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -7,7 +7,7 @@ public class SetterDemoApp {
     public static void main(String[] args) {
         // load the spring configuration file
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("second_dependencyInjection.xml");
+                new ClassPathXmlApplicationContext("two_dependencyInjection.xml");
 
 
         // retrieve bean from spring container

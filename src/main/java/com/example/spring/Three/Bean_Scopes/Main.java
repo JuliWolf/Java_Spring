@@ -1,13 +1,13 @@
-package com.example.spring.Third.Bean_Scopes;
+package com.example.spring.Three.Bean_Scopes;
 
-import com.example.spring.Second.Dependency_injections.Coach;
+import com.example.spring.Two.Dependency_injections.Coach;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
         // load the spring configuration file
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("third_beanScopes.xml");
+                new ClassPathXmlApplicationContext("three_beanScopes.xml");
 
         // retrieve bean from spring container
         Coach theCoach = context.getBean("myCoach", Coach.class);

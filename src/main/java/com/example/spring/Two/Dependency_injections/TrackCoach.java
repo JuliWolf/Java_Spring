@@ -1,4 +1,4 @@
-package com.example.spring.Second.Dependency_injections;
+package com.example.spring.Two.Dependency_injections;
 
 public class TrackCoach implements Coach {
 
@@ -16,5 +16,8 @@ public class TrackCoach implements Coach {
     @Override
     public String getDailyFortune() {
         return "Just Fo It: " + fortuneService.getFortune();
+    }
+
+    private void doMyStartupStuff() {
     }
 }
