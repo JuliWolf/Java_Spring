@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         // load the spring configuration file
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("second_applicationContext.xml");
+                new ClassPathXmlApplicationContext("second_dependencyInjection.xml");
 
 
         // retrieve bean from spring container
