@@ -7,7 +7,7 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- define the dependency-->
+    <!-- define the dependency -->
     <bean
         id="myFortuneService"
         class="com.example.spring.Second.Dependency_injections.HappyFortuneService"
@@ -19,8 +19,14 @@
         id="myCoach"
         class="com.example.spring.Second.Dependency_injections.TrackCoach"
     >
-        <!--set up constructor injection-->
+        <!-- set up constructor injection -->
         <constructor-arg ref="myFortuneService" />
+    </bean>
+
+    <bean id="myCricketCoach"
+          class="com.example.spring.Second.Dependency_injections.CricketCoach">
+        <!-- set up setter injection -->
+        <property name="fortuneService" ref="myFortuneService" />
     </bean>
 </beans>
 
