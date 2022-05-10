@@ -3,10 +3,13 @@ package com.example.spring.Seven.Configuration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
+@PropertySource("classpath:sport.properties")
 //@ComponentScan("com.example.spring.Seven.Configuration")
 public class SportConfig {
+
     // define bean for our sad fortune service
     @Bean
     public FortuneService sadFortuneService () {
