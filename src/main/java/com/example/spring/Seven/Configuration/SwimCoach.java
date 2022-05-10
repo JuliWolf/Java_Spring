@@ -1,13 +1,20 @@
 package com.example.spring.Seven.Configuration;
 
 public class SwimCoach implements Coach {
+
+    private FortuneService fortuneService;
+
+    public SwimCoach (FortuneService fortuneService) {
+        this.fortuneService = fortuneService;
+    }
+
     @Override
     public String getDailyWorkout() {
-        return null;
+        return "Swim 1000 meters as a warm up";
     }
 
     @Override
     public String getDailyFortune() {
-        return null;
+        return fortuneService.getFortune();
     }
 }
